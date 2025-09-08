@@ -1,7 +1,6 @@
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import React, { useEffect, useState } from "react";
 import { Keyboard, TouchableOpacity, View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Icons from "./icons";
 
 const TabBarComponent = ({
@@ -12,7 +11,6 @@ const TabBarComponent = ({
 //   const screens = state.routeNames.filter(route => route.includes("(screens)"))
 
   const currentRoute = state.routes[state.index].name;
-  const insets = useSafeAreaInsets();
   const [isKeyboardVisible, setKeyboardVisible] = useState(false);
 
   useEffect(() => {
